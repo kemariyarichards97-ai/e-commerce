@@ -151,6 +151,40 @@ button:active {
 /* Highlight */
 /* -------------------- */
 
+/* ===========================
+   HIGHLIGHTS SECTION WAVES
+=========================== */
+
+#highlights {
+    position: relative;
+}
+
+#highlights::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    transform: translateY(-100%);
+    width: 100vw;
+    height: 12vw;
+    background: url("assets/assets/wave.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#highlights::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    transform: translateY(100%) rotate(180deg);
+    width: 100vw;
+    height: 12vw;
+    background: url("assets/assets/wave.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .highlight__wrapper {
     display: flex;
     justify-content: space-between;
