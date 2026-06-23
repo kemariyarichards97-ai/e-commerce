@@ -7,6 +7,27 @@
     font-family: 'Playfair Display', serif;
 }
 
+/* -------------------- */
+/* FIXED BODY (ADDED PURPLE SWIRL) */
+/* -------------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* REAL WORKING PURPLE SWIRL BACKGROUND */
+    background:
+        radial-gradient(circle at 20% 20%, rgba(115, 66, 214, 0.45), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(147, 66, 214, 0.35), transparent 45%),
+        linear-gradient(135deg, #7474ba, #2b1b5a);
+
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* -------------------- */
+/* NAV */
+/* -------------------- */
+
 nav {
     height: 80px;
     display: flex;
@@ -28,7 +49,7 @@ img {
 }
 
 .purple {
-    color: #737373;
+    color: #130202;
 }
 
 .logo {
@@ -48,7 +69,7 @@ li {
     margin-left: 16px;
     text-decoration: none;
     font-size: 20px;
-    color: purple;
+    color: rgb(14, 8, 14);
     font-weight: bold;
     padding: 8px;
 }
@@ -66,14 +87,23 @@ li {
     text-decoration: none;
 }
 
+/* -------------------- */
+/* LANDING */
+/* -------------------- */
+
 #landing {
     background-color: rgba(115, 66, 214, 0.1);
 }
 
+/* FIXED HEADER (merged duplicate issue) */
 header {
     padding: 80px 0;
+    text-align: center;
 }
 
+/* -------------------- */
+/* HEADER CONTENT */
+/* -------------------- */
 
 .header__container {
     width: 100%;
@@ -99,7 +129,7 @@ header {
 
 h1 {
     font-size: 56px;
-    color: #734273;
+    color: #0f020f;
     margin-bottom: 24px;
     text-align: center;
 }
@@ -109,6 +139,10 @@ h2 {
     margin-bottom: 32px;
     text-align: center;
 }
+
+/* -------------------- */
+/* BUTTONS */
+/* -------------------- */
 
 button {
     cursor: pointer;
@@ -133,6 +167,10 @@ button:active {
     background-color: #5f35b7;
 }
 
+/* -------------------- */
+/* LAYOUT */
+/* -------------------- */
+
 .header__img--wrapper {
     padding: 20px;
 }
@@ -148,21 +186,24 @@ button:active {
 }
 
 /* -------------------- */
-/* Highlight */
+/* HIGHLIGHTS + WAVES FIXED */
 /* -------------------- */
-
-/* ===========================
-   HIGHLIGHTS SECTION WAVES
-=========================== */
 
 #highlights {
     position: relative;
+    background-color: white;
+    overflow: hidden;
+}
+
+.highlight__para {
+    color: #555;
+    line-height: 1.6;
 }
 
 #highlights::before {
     content: "";
     position: absolute;
-    top: 1px;
+    top: 0;
     left: 0;
     transform: translateY(-100%);
     width: 100vw;
@@ -175,7 +216,7 @@ button:active {
 #highlights::after {
     content: "";
     position: absolute;
-    bottom: 1px;
+    bottom: 0;
     left: 0;
     transform: translateY(100%) rotate(180deg);
     width: 100vw;
@@ -190,6 +231,9 @@ button:active {
     justify-content: space-between;
     gap: 32px;
     margin-top: 48px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
 }
 
 .highlight {
@@ -220,12 +264,29 @@ button:active {
     margin-bottom: 16px;
 }
 
-.highlight__para {
-    color: #555;
-    line-height: 1.6;
-}
-
 .section__title {
     margin-top: 80px;
     margin-bottom: 64px;
 }
+
+/* -------------------- */
+/* HERO + FEATURES (UNCHANGED) */
+/* -------------------- */
+
+.hero {
+    text-align: center;
+    padding: 40px;
+}
+
+.hero img {
+    width: 400px;
+}
+
+.features {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+}
+
+
+
